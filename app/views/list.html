@@ -1,19 +1,22 @@
  <h2>{{wishlist.title}} - {{wishlist.description}}</h2>
+ <div id="image" class="section scrollspy">
+         <div class="row">
+           <!-- Image Card -->
+           <div class="col s6" ng-repeat="wll in wishlistlinks">
+             <div class="card">
+               <div class="card-image">
+                 <img src="{{wll.picture}}">
+                 <span class="card-title"></span>
+               </div>
+               <div class="card-content">
+                 <p>{{wll.title}}</p>
+               </div>
+               <div class="card-action">
+                 <a href="{{wll.link}}" target="_blank">Lien</a>
+               </div>
+             </div>
+           </div>
 
-     <div class="row">
-            <div class="col s12">
-              <div class="card col s6" ng-repeat="wll in wishlistlinks">
-                <div class="card-image">
-                  <img src="{{wll.picture}}">
-                  <span class="card-title">{{wll.title}}</span>
-                </div>
-                <div class="card-content">
-                  <p>{{wll.description}}</p>
-                </div>
-                <div class="card-action">
-                  <a href="{{wll.link}}" target="_blank">Lien</a>
-                </div>
-              </div>
-            </div>
-          </div>
+         </div>
+       </div>
 <a href="#/add_wishlistlink">Ajouter un produit a la liste</a>
