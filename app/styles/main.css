@@ -9,6 +9,37 @@ body {
   padding: 0;
 }
 
+.brand-logo img{
+  width: 60px;
+}
+
+.brand-logo{
+  padding: 2px !important;
+}
+
+.collection .collection-item.avatar {
+  min-height: 60px;
+}
+
+.collapsible-body{
+  padding: 30px;
+}
+.delete_icon{
+  color: #eeeeee;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.delete_icon:hover{
+  color: #e53935;
+  transition: all .3s;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -19,7 +50,6 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
   margin-bottom: 10px;
 }
 /* Make the masthead heading the same height as the navigation */

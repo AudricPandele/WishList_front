@@ -24,4 +24,14 @@
 
         });
 
+      $scope.deleteLink = function(id){
+        if (window.confirm("Voulez vous vraiment supprimer ce produit ?")) {
+          $http.delete("http://0.0.0.0:9292/wishlistslinks/"+id+"/delete")
+            .success(function(data){
+              alert('Supprimé');
+              location.reload();
+            });
+        }
+      }
+
     });

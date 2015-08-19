@@ -30,32 +30,40 @@ angular
       .when('/home', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
-        controllerAs: 'main'
+        controllerAs: 'main',
+        access: {
+            requiresLogin: true
+        }
       })
       .when('/mylist/:id', {
         templateUrl: 'views/list.html',
         controller: 'ListCtrl',
-        controllerAs: 'list'
+        controllerAs: 'list',
+        access: {
+            requiresLogin: true
+        }
       })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
-        controllerAs: 'about'
+        controllerAs: 'about',
+
       })
       .when('/create_wishlist', {
         templateUrl: 'views/create_wishlist.html',
         controller: 'CreatewishlistCtrl',
-        controllerAs: 'wishlist'
+        controllerAs: 'wishlist',
+        access: {
+            requiresLogin: true
+        }
       })
       .when('/add_wishlistlink', {
         templateUrl: 'views/add_wishlistlink.html',
         controller: 'AddWishListlinkCtrl',
-        controllerAs: 'add_wishlistlink'
-      })
-      .when('/logout', {
-        templateUrl: 'views/logout.html',
-        controller: 'LogoutCtrl',
-        controllerAs: 'logout'
+        controllerAs: 'add_wishlistlink',
+        access: {
+            requiresLogin: true
+        }
       })
       .otherwise({
         redirectTo: '/'

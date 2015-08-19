@@ -1,4 +1,4 @@
- <h2>{{wishlist.title}} - {{wishlist.description}}</h2>
+ <h5 class="header col s12 light">{{wishlist.title}} - {{wishlist.description}}</h5>
  <div id="image" class="section scrollspy">
          <div class="row">
            <!-- Image Card -->
@@ -6,13 +6,14 @@
              <div class="card">
                <div class="card-image">
                  <img src="{{wll.picture}}">
+                  <i class="material-icons delete_icon" ng-click="deleteLink({{wll.id}})">delete</i>
                  <span class="card-title"></span>
                </div>
                <div class="card-content">
                  <p>{{wll.title}}</p>
                </div>
                <div class="card-action">
-                 <a href="{{wll.link}}" target="_blank">Lien</a>
+                 <a href="{{wll.link}}" target="_blank" class="teal-text text-lighten-3">Link</a>
                </div>
              </div>
            </div>

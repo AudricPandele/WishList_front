@@ -1,7 +1,34 @@
-<div class="jumbotron">
-  <form ng-submit="newUser()">
-    <input type='email' ng-model="user.mail" placeholder="Mail">
-    <input type='password' ng-model="user.password" placeholder="Password">
-    <input type="submit">
-  </form>
+<h1 class="header center teal-text text-lighten-3">Wishlists</h1>
+<div class="row center">
+  <h5 class="header col s12 light">Create and share magical Wishlists !</h5>
 </div>
+<ul class="collapsible" data-collapsible="accordion">
+  <li class="active">
+    <div class="collapsible-header active"><i class="material-icons">vpn_key</i>Login or register</div>
+    <div class="collapsible-body">
+      <div class="container">
+        <form ng-submit="newUser()" class="">
+          <div class="row">
+            <div class="input-field col s6">
+              <input type='email' ng-model="user.mail" placeholder="Mail">
+            </div>
+            <div class="input-field col s6">
+              <input type='password' ng-model="user.password" placeholder="Password">
+            </div>
+            <button class="btn waves-effect waves-light teal lighten-3" type="submit" name="action">Submit
+             <i class="material-icons">send</i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<script type="text/javascript">
+$(document).ready(function(){
+ $('.collapsible').collapsible({
+   accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+ });
+});
+</script>

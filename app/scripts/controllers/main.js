@@ -17,7 +17,6 @@
         });
 
         $scope.logout = function(){
-          alert('souosu');
           $cookieStore.remove('id');
           $cookieStore.remove('mail');
           $cookieStore.remove('list_id');
