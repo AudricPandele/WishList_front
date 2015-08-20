@@ -8,7 +8,10 @@
       <span class="title teal-text text-darken-4">{{wl.title}}</span>
       <p class="teal-text text-lighten-4">{{wl.description}}<br>
       </p>
-      <a ng-href="/mylist/{{wl.id}}" class="secondary-content teal-text text-lighten-3"><i class="material-icons">visibility</i></a>
+      <a ng-click="deleteList({{wl.id}})" class="secondary-content red-text text-lighten-1 delete_icon"><i class="material-icons">delete</i></a>
     </li>
   </a>
 </ul>
+
+
+<a href="#/create_wishlist" class="btn-floating btn-large waves-effect waves-light teal"><i class="material-icons">add</i></a>

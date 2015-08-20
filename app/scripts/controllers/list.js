@@ -7,8 +7,24 @@
  * # MainCtrl
  * Controller of the wishListApp
  */
+
   angular.module('wishListApp')
     .controller('ListCtrl', function($scope, $routeParams, $cookieStore, $http) {
+      $scope.rating = 0;
+       $scope.ratings = [{
+           max: 5
+       }];
+
+       $scope.getSelectedRating = function (rate, id) {
+           $http.put("http://0.0.0.0:9292/wishlistslinks/"+id+"/rate/"+rate)
+           .success(function(data){
+             alert('Noté');
+             location.reload();
+           });
+       }
+
+      console.log($scope.rating);
+      console.log($scope.starRating);
 
       $http.get("http://0.0.0.0:9292/wishlists/"+$routeParams.id)
         .success(function(data){
@@ -26,7 +42,7 @@
 
       $scope.deleteLink = function(id){
         if (window.confirm("Voulez vous vraiment supprimer ce produit ?")) {
-          $http.delete("http://0.0.0.0:9292/wishlistslinks/"+id+"/delete")
+          $http.delete("http://0.0.0.0:9292/wishlistslinks/"+id)
             .success(function(data){
               alert('Supprimé');
               location.reload();

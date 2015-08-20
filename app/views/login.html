@@ -2,9 +2,29 @@
 <div class="row center">
   <h5 class="header col s12 light">Create and share magical Wishlists !</h5>
 </div>
-<ul class="collapsible" data-collapsible="accordion">
+<ul class="collapsible" data-collapsible="accordion" ng-hide="idCookie">
   <li class="active">
-    <div class="collapsible-header active"><i class="material-icons">vpn_key</i>Login or register</div>
+    <div class="collapsible-header active"><i class="material-icons">vpn_key</i>Login</div>
+    <div class="collapsible-body">
+      <div class="container">
+        <form ng-submit="loginUser()" class="">
+          <div class="row">
+            <div class="input-field col s6">
+              <input type='email' ng-model="user.mail" placeholder="Mail">
+            </div>
+            <div class="input-field col s6">
+              <input type='password' ng-model="user.password" placeholder="Password">
+            </div>
+            <button class="btn waves-effect waves-light teal lighten-3" type="submit" name="action">Submit
+             <i class="material-icons">send</i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="collapsible-header active"><i class="material-icons">perm_identity</i>Register</div>
     <div class="collapsible-body">
       <div class="container">
         <form ng-submit="newUser()" class="">

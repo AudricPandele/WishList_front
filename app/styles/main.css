@@ -9,6 +9,26 @@ body {
   padding: 0;
 }
 
+.rating {
+    color: #a9a9a9;
+    margin: 0;
+    padding: 0;
+}
+ul.rating {
+    display: inline-block;
+}
+.rating li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 1px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.rating .filled {
+    color: red;
+}
+
 .brand-logo img{
   width: 60px;
 }
@@ -29,6 +49,10 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.card .card-content{
+  padding: 20px 0 0;
 }
 
 .delete_icon:hover{
