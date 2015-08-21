@@ -2,19 +2,34 @@
  <div id="image" class="section scrollspy">
          <div class="row">
            <!-- Image Card -->
-           <div class="col s12 m6" ng-repeat="wll in wishlistlinks | orderBy:'-rate'">
+           <div class="col s12 m3" ng-repeat="wll in wishlistlinks | orderBy:'-rate'">
              <div class="card">
-               <div class="card-image">
-                 <img src="{{wll.picture}}">
+               <a href="{{wll.link}}" target="_blank">
+               <div class="card-image" style="background-image:url({{wll.picture}})">
+                 <!-- <img src="{{wll.picture}}"> -->
                   <i class="material-icons delete_icon" ng-click="deleteLink({{wll.id}})">delete</i>
                  <span class="card-title"></span>
                </div>
+               </a>
                <div class="card-content">
                  <p>{{wll.title}}</p>
                  <br>
-                 <span ng-repeat="rating in ratings">
+                 <div class="sol s12">
+                 <div class="fixed-action-btn perso" style="bottom: 45px; right: 24px;">
+                     <a class="btn-floating btn-large" style="background-color: #{{wll.color_rate}}">
+                       <i class="large material-icons">star</i>
+                     </a>
+                     <ul>
+                       <li class="perso_color"><a ng-click="getSelectedRating(4, {{wll.id}}, 'F44336')" class="btn-floating perso_color red"></a></li>
+                       <li class="perso_color"><a ng-click="getSelectedRating(3, {{wll.id}}, 'fdd835')" class="btn-floating perso_color yellow darken-1"></a></li>
+                       <li class="perso_color"><a ng-click="getSelectedRating(2, {{wll.id}}, '4CAF50')" class="btn-floating perso_color green"></a></li>
+                       <li class="perso_color"><a ng-click="getSelectedRating(1, {{wll.id}}, '2196F3')" class="btn-floating perso_color blue"></a></li>
+                     </ul>
+                   </div>
+                              </div>
+                 <!-- <span ng-repeat="rating in ratings">
                     <div star-rating rating-value="wll.rate" max="rating.max" on-rating-selected="getSelectedRating(rating, wll.id)"></div>
-                  </span>
+                  </span> -->
                   <br>
                <div class="card-action">
                  <a href="{{wll.link}}" target="_blank" class="teal-text text-lighten-3">Link</a>

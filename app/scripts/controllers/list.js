@@ -12,13 +12,13 @@
     .controller('ListCtrl', function($scope, $routeParams, $cookieStore, $http) {
       $scope.rating = 0;
        $scope.ratings = [{
-           max: 5
+           max: 4
        }];
 
-       $scope.getSelectedRating = function (rate, id) {
-           $http.put("http://0.0.0.0:9292/wishlistslinks/"+id+"/rate/"+rate)
+       $scope.getSelectedRating = function (rate, id, color_rate) {
+
+           $http.put("http://0.0.0.0:9292/wishlistslinks/"+id+"?rate="+rate+"&color_rate="+color_rate)
            .success(function(data){
-             alert('Noté');
              location.reload();
            });
        }

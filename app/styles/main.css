@@ -9,8 +9,16 @@ body {
   padding: 0;
 }
 
+.card .card-content p {
+    margin: 0;
+    color: inherit;
+}
+.card .card-action {
+
+}
+
 .rating {
-    color: #a9a9a9;
+    color: #e0f2f1;
     margin: 0;
     padding: 0;
 }
@@ -26,7 +34,7 @@ ul.rating {
     cursor: pointer;
 }
 .rating .filled {
-    color: red;
+    color: #26a69a;
 }
 
 .brand-logo img{
@@ -51,8 +59,20 @@ ul.rating {
   right: 0;
 }
 
+.card .card-image{
+  height: 200px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all .4s;
+}
+.card .card-image:hover{
+  background-size: 105%;
+  transition: all .4s;
+}
+
 .card .card-content{
-  padding: 20px 0 0;
+  padding: 20px 0 0 !important;
 }
 
 .delete_icon:hover{
@@ -72,6 +92,31 @@ ul.rating {
   padding-right: 15px;
 }
 
+.fixed-action-btn ul {
+  height: 40px;
+}
+
+.perso_color{
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+
+.perso_color a{
+  width: 70px;
+}
+
+.perso_color a:hover{
+  width: 60px;
+}
+
+
+.perso{
+  position: relative !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  padding: 0 !important;
+  margin-left: 70%;
+}
 /* Custom page header */
 .header {
   margin-bottom: 10px;

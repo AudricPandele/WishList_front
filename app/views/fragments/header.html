@@ -1,33 +1,14 @@
-<nav ng-hide="idCookie" class="teal lighten-3">
-    <div class="nav-wrapper">
-      <div class="col s1">
-        <a href="#/" class="brand-logo"><img src="images/logo_wish.png" alt="" /></a>
-      </div>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#/">Home</a></li>
-        <li><a ng-href="#/about">About</a></li>
-        <li><a ng-href="#/">Contact</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="#/">Home</a></li>
-        <li><a ng-href="#/about">About</a></li>
-        <li><a ng-href="#/">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
 <nav ng-hide="!idCookie" class="teal lighten-3">
     <div class="nav-wrapper container">
       <a href="#/" class="logo-container brand-logo"><img src="images/logo_wish.png" alt=""/></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#/home">My WishLists</a></li>
-        <li><a href="" ng-click="logout()">Log out</a></li>
+        <li><a href="#/home"><i class="large material-icons">view_list</i></a></li>
+        <li><a href="" ng-click="logout()"><i class="large material-icons">power_settings_new</i></a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="#/create_wishlist">Create a WishList</a></li>
-        <li><a href="" ng-click="logout()"> Log out</a></li>
+        <li><a href="#/home"><i class="large material-icons">view_list</i></a></li>
+        <li><a href="" ng-click="logout()"><i class="large material-icons">power_settings_new</i></a></li>
       </ul>
     </div>
   </nav>

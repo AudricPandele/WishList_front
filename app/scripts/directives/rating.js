@@ -4,7 +4,9 @@ angular.module('wishListApp')
         restrict: 'A',
         template: '<ul class="rating">' +
             '<li ng-repeat="star in stars" ng-class="star" ng-click="toggle($index)">' +
+            '<a class="btn-floating">'+
             '\u2605' +
+            '</a>'+
             '</li>' +
             '</ul>',
         scope: {
