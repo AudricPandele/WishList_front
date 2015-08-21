@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="wishListApp" ng-controller="MainCtrl">
+<html lang="en" ng-app="wishListApp">
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -50,8 +50,6 @@
     </script>
 
 
-
-
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -71,6 +69,7 @@
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/home.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/login.js"></script>
@@ -79,10 +78,27 @@
         <script src="scripts/controllers/add_wishlistlink.js"></script>
         <script src="scripts/controllers/logout.js"></script>
         <script src="scripts/directives/rating.js"></script>
+        <script src="scripts/controllers/public_list.js"></script>
         <!-- endbuild -->
 
         <script type="text/javascript">
           $(".button-collapse").sideNav();
         </script>
+
+        <script type="text/javascript">
+        $(document).ready(function(){
+          $('.tooltipped').tooltip({delay: 50});
+        });
+        </script>
+
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4&appId=920151581391515";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
 </body>
 </html>

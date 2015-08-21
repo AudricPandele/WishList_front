@@ -9,7 +9,13 @@
  */
 
   angular.module('wishListApp')
-    .controller('ListCtrl', function($scope, $routeParams, $cookieStore, $http) {
+    .controller('ListCtrl', function($scope, $routeParams, $cookieStore, $http, $location) {
+      if(!$cookieStore.get('id')){
+          $location.path('/');
+      }else {
+          $scope.idCookie = $cookieStore.get('id');
+      }
+
       $scope.rating = 0;
        $scope.ratings = [{
            max: 4
@@ -22,9 +28,6 @@
              location.reload();
            });
        }
-
-      console.log($scope.rating);
-      console.log($scope.starRating);
 
       $http.get("http://0.0.0.0:9292/wishlists/"+$routeParams.id)
         .success(function(data){
@@ -44,7 +47,6 @@
         if (window.confirm("Voulez vous vraiment supprimer ce produit ?")) {
           $http.delete("http://0.0.0.0:9292/wishlistslinks/"+id)
             .success(function(data){
-              alert('Supprimé');
               location.reload();
             });
         }

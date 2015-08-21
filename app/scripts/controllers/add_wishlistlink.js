@@ -10,6 +10,9 @@
 
 angular.module('wishListApp')
   .controller('AddWishListlinkCtrl', function ($scope, $http, $location, $routeParams, $cookieStore) {
+    if(!$cookieStore.get('id')){
+        $location.path('/');
+    }
 
     $scope.newWishlistlink = function(wishlistlink) {
       $http.post("http://0.0.0.0:9292/wishlistslinks?link="+$scope.wishlistlink.link+"&wishlist_id="+$cookieStore.get('list_id'))

@@ -34,20 +34,14 @@ angular
         controllerAs: 'login'
       })
       .when('/home', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main',
-        access: {
-            requiresLogin: true
-        }
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl',
+        controllerAs: 'home'
       })
       .when('/mylist/:id', {
         templateUrl: 'views/list.html',
         controller: 'ListCtrl',
-        controllerAs: 'list',
-        access: {
-            requiresLogin: true
-        }
+        controllerAs: 'list'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -58,20 +52,19 @@ angular
       .when('/create_wishlist', {
         templateUrl: 'views/create_wishlist.html',
         controller: 'CreatewishlistCtrl',
-        controllerAs: 'wishlist',
-        access: {
-            requiresLogin: true
-        }
+        controllerAs: 'wishlist'
       })
       .when('/add_wishlistlink', {
         templateUrl: 'views/add_wishlistlink.html',
         controller: 'AddWishListlinkCtrl',
-        controllerAs: 'add_wishlistlink',
-        access: {
-            requiresLogin: true
-        }
+        controllerAs: 'add_wishlistlink'
+      })
+      .when('/:id/:list_id', {
+        templateUrl: 'views/public_list.html',
+        controller: 'PublicListCtrl',
+        controllerAs: 'public_list'
       })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })

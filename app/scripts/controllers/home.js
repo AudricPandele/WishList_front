@@ -8,7 +8,10 @@
  * Controller of the wishListApp
  */
   angular.module('wishListApp')
-    .controller('MainCtrl', function($location, $scope, $routeParams, $cookieStore, $http) {
+    .controller('HomeCtrl', function($location, $scope, $routeParams, $cookieStore, $http) {
+      if(!$cookieStore.get('id')){
+          $location.path('/');
+      }
 
       $scope.idCookie = $cookieStore.get('id');
 

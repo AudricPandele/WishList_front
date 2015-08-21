@@ -1,8 +1,9 @@
  <h5 class="header col s12 light">{{wishlist.title}} - {{wishlist.description}}</h5>
+ <div class="fb-share-button" data-href="http://localhost:9000/#/{{idCookie}}/{{wishlist.id}}" data-layout="button"></div>
  <div id="image" class="section scrollspy">
          <div class="row">
            <!-- Image Card -->
-           <div class="col s12 m3" ng-repeat="wll in wishlistlinks | orderBy:'-rate'">
+           <div class="col s12 m2" ng-repeat="wll in wishlistlinks | orderBy:'-rate'">
              <div class="card">
                <a href="{{wll.link}}" target="_blank">
                <div class="card-image" style="background-image:url({{wll.picture}})">
@@ -14,7 +15,7 @@
                <div class="card-content">
                  <p>{{wll.title}}</p>
                  <br>
-                 <div class="sol s12">
+                 <div class="col s12">
                  <div class="fixed-action-btn perso" style="bottom: 45px; right: 24px;">
                      <a class="btn-floating btn-large" style="background-color: #{{wll.color_rate}}">
                        <i class="large material-icons">star</i>
@@ -39,8 +40,8 @@
 
          </div>
        </div>
-       <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-         <a href="#/add_wishlistlink" class="btn-floating btn-large teal">
-           <i class="material-icons">add</i>
+       <div class="fixed-action-btn add_wishlistlink" style="bottom: 45px; right: 24px;">
+         <a href="#/add_wishlistlink" class="btn-floating btn-large white tooltipped" data-position="left" data-delay="50" data-tooltip="Add a product">
+           <i class="material-icons teal-text">add</i>
          </a>
        </div>

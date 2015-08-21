@@ -10,6 +10,10 @@
 
 angular.module('wishListApp')
   .controller('CreatewishlistCtrl', function ($scope, $http, $location, $routeParams, $cookieStore) {
+    if(!$cookieStore.get('id')){
+        $location.path('/');
+    }
+
     var idCookie = $cookieStore.get('id');
 
     $scope.newWishlist = function(wishlist) {
