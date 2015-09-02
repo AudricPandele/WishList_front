@@ -15,7 +15,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'uiRouterStyles'
   ])
   .config(function ($routeProvider, $httpProvider) {
         //Enable cross domain calls
@@ -29,6 +30,14 @@ angular
 
     $routeProvider
       .when('/', {
+        templateUrl: 'views/homepage.html',
+        // controller: 'HomePageCtrl',
+        // controllerAs: 'hompepage',
+        data: {
+           css: 'styles/bootstrap.min.css'
+         }
+      })
+      .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'RegisterCtrl',
         controllerAs: 'login'

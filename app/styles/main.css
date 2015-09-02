@@ -9,6 +9,15 @@ body {
   padding: 0;
 }
 
+blockquote{
+  border-color: inherit !important;
+}
+
+.feature{
+  margin-bottom: 0 !important;
+  padding: 40px 0;
+}
+
 .add_wishlistlink{
   bottom: auto !important;
   top: 20px !important;
@@ -152,7 +161,7 @@ ul.rating {
 
 /* Main marketing message and sign up button */
 .jumbotron {
-  text-align: center;
+  /*text-align: center;*/
   border-bottom: 1px solid #e5e5e5;
 }
 .jumbotron .btn {

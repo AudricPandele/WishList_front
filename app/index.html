@@ -1,104 +1,109 @@
 <!doctype html>
 <html lang="en" ng-app="wishListApp">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.css" />
-    <!-- endbuild -->
-  </head>
-  <body ng-app="wishListApp">
-    <!--[if lte IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/materialize/bin/materialize.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link ng-hide="idCookie" rel="stylesheet" href="/styles/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/styles/prism.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="/styles/styles.2.4.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="styles/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.css" />
+  <!-- endbuild -->
+</head>
+<body ng-app="wishListApp" class="grey lighten-4">
+  <!--[if lte IE 8]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <ng-include src="'/views/fragments/header.html'"></ng-include>
+  <!-- Add your site or application content here -->
+  <ng-include src="'/views/fragments/header.html'"></ng-include>
 
-    <div class="section no-pad-bot" id="index-banner">
-        <div class="row center">
-          <div ng-view=""></div>
-        </div>
-    </div>
-
-
-    <div class="footer">
-      <div class="container">
-
-      </div>
-    </div>
+  <!-- <div class="section no-pad-bot" id="index-banner">
+  <div class="row center"> -->
+  <div ng-view=""></div>
+  <!-- </div>
+</div> -->
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<!-- <div class="footer">
+<div class="container">
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
+</div>
+</div> -->
 
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-facebook/lib/angular-facebook.js"></script>
-    <script src="bower_components/materialize/dist/js/materialize.js"></script>
-    <script src="bower_components/materialize/dist/js/init.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+  !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+    (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+    r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+  }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-XXXXX-X');
+  ga('send', 'pageview');
+  </script>
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/home.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <script src="scripts/controllers/login.js"></script>
-        <script src="scripts/controllers/createwishlist.js"></script>
-        <script src="scripts/controllers/list.js"></script>
-        <script src="scripts/controllers/add_wishlistlink.js"></script>
-        <script src="scripts/controllers/logout.js"></script>
-        <script src="scripts/directives/rating.js"></script>
-        <script src="scripts/controllers/public_list.js"></script>
-        <!-- endbuild -->
 
-        <script type="text/javascript">
-          $(".button-collapse").sideNav();
-        </script>
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/materialize/bin/materialize.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-facebook/lib/angular-facebook.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+  <script src="bower_components/angular-ui-router-styles/ui-router-styles.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
 
-        <script type="text/javascript">
-        $(document).ready(function(){
-          $('.tooltipped').tooltip({delay: 50});
-        });
-        </script>
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/home.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/about.js"></script>
+  <script src="scripts/controllers/login.js"></script>
+  <script src="scripts/controllers/createwishlist.js"></script>
+  <script src="scripts/controllers/list.js"></script>
+  <script src="scripts/controllers/add_wishlistlink.js"></script>
+  <script src="scripts/controllers/logout.js"></script>
+  <script src="scripts/directives/rating.js"></script>
+  <script src="scripts/controllers/public_list.js"></script>
+  <!-- endbuild -->
 
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4&appId=920151581391515";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+  <script type="text/javascript">
+  $(".button-collapse").sideNav();
+  </script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.tooltipped').tooltip({delay: 50});
+  });
+  </script>
+
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4&appId=920151581391515";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
 </body>
 </html>

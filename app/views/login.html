@@ -1,56 +1,99 @@
-<div class="container">
-<h1 class="header center teal-text text-lighten-3">Wishlists</h1>
-<div class="row center">
-  <h5 class="header col s12 light">Create and share magical Wishlists !</h5>
-</div>
-<ul class="collapsible" data-collapsible="accordion" ng-hide="idCookie" ng-controller="MainCtrl">
-  <li class="active">
-    <div class="collapsible-header active"><i class="material-icons">vpn_key</i>Login</div>
-    <div class="collapsible-body">
+<div class="video-container" style="padding-top:0;">
+
+  <div class="share-buttons-group affix-top">
+    <a href="https://twitter.com/home?status=Beautiful%20Free%20Videos%20for%20your%20Homepage%20Background%20%40coverr%20http://www.coverr.co" target="_blank"  class="btn-track" data-event="TwitterShare_Click">
+      <div id="twitter-button" class="share-button-banner">
+        <div class="share-container">
+          <i class="fa fa-twitter share-content"></i>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.coverr.co" target="_blank" class="btn-track" data-event="FacebookShare_Click">
+      <div id="facebook-button" class="share-button-banner">
+        <div class="share-container">
+          <i class="fa fa-facebook share-content"></i>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://plus.google.com/share?url=http://www.coverr.co" target="_blank" class="btn-track" data-event="GoogleShare_Click">
+      <div id="google-button" class="share-button-banner">
+        <div class="share-container">
+          <i class="fa fa-google-plus share-content"></i>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="title-container">
+    <div class="row center">
       <div class="container">
-        <form ng-submit="loginUser()" class="">
-          <div class="row">
-            <div class="input-field col s6">
-              <input type='email' ng-model="user.mail" placeholder="Mail">
+        <h5 class="header light white-text">Login or register and enjoy</h5>
+        <ul class="collapsible white" data-collapsible="accordion" ng-hide="idCookie" >
+          <li class="active">
+            <div class="collapsible-header active black-text grey lighten-2"><i class="material-icons">vpn_key</i>Login</div>
+            <div class="collapsible-body grey lighten-3">
+              <div class="container">
+                <form ng-submit="loginUser()" class="">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input type='email' ng-model="user.mail" placeholder="Mail"  class="teal-text">
+                    </div>
+                    <div class="input-field col s6">
+                      <input type='password' ng-model="user.password" placeholder="Password"  class="teal-text">
+                    </div>
+                    <button class="btn waves-effect waves-light teal lighten-3" type="submit" name="action">Submit
+                      <i class="material-icons">send</i>
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
-            <div class="input-field col s6">
-              <input type='password' ng-model="user.password" placeholder="Password">
+          </li>
+          <li>
+            <div class="collapsible-header active black-text grey lighten-2"><i class="material-icons">perm_identity</i>Register</div>
+            <div class="collapsible-body grey lighten-3">
+              <div class="container">
+                <form ng-submit="newUser()" class="">
+                  <div class="row">
+                    <div class="input-field col s6">
+                      <input type='email' ng-model="user.mail" placeholder="Mail" class="teal-text">
+                    </div>
+                    <div class="input-field col s6">
+                      <input type='password' ng-model="user.password" placeholder="Password"  class="teal-text">
+                    </div>
+                    <button class="btn waves-effect waves-light teal lighten-3" type="submit" name="action">Submit
+                      <i class="material-icons">send</i>
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
-            <button class="btn waves-effect waves-light teal lighten-3" type="submit" name="action">Submit
-             <i class="material-icons">send</i>
-            </button>
-          </div>
-        </form>
+          </li>
+        </ul>
       </div>
     </div>
-  </li>
-  <li>
-    <div class="collapsible-header active"><i class="material-icons">perm_identity</i>Register</div>
-    <div class="collapsible-body">
-      <div class="container">
-        <form ng-submit="newUser()" class="">
-          <div class="row">
-            <div class="input-field col s6">
-              <input type='email' ng-model="user.mail" placeholder="Mail">
-            </div>
-            <div class="input-field col s6">
-              <input type='password' ng-model="user.password" placeholder="Password">
-            </div>
-            <button class="btn waves-effect waves-light teal lighten-3" type="submit" name="action">Submit
-             <i class="material-icons">send</i>
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </li>
-</ul>
+
+  </div>
+
+  <video autoplay loop class="fillWidth" poster="media/MP4/clothing.jpg">
+    <source src="media/MP4/clothing.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+    <source src="media/MP4/clothing.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+  </video>
+  <div class="poster hidden">
+    <img src="media/MP4/clothing.jpg" alt="">
+  </div>
+  <div style="position: absolute; bottom: 10px; left: 20px;">
+    <a id="topDownloadButton" class="btn btn-success btn-download" data-name="" href="index-ref=producthunt.html#" style="display: none; background-color: transparent; border-color: #ffffff; border: 2px solid #fff; font-size: 20px" data-location="top"><i class="fa fa-download"></i> Download</a>
+  </div>
 </div>
+
 
 <script type="text/javascript">
 $(document).ready(function(){
- $('.collapsible').collapsible({
-   accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
- });
+  $('.collapsible').collapsible({
+    accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+  });
 });
 </script>
