@@ -13,6 +13,10 @@ blockquote{
   border-color: inherit !important;
 }
 
+a{
+  cursor: pointer;
+}
+
 .feature{
   margin-bottom: 0 !important;
   padding: 40px 0;
@@ -22,9 +26,12 @@ blockquote{
   bottom: auto !important;
   top: 20px !important;
 }
+.collection .collection-item.avatar{
+    min-height: 64px !important;
+}
 
 .card .card-content{
-  
+  cursor: pointer;
 }
 
 .card .card-content p {

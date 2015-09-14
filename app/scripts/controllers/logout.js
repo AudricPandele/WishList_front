@@ -14,7 +14,7 @@ angular.module('wishListApp')
         $cookieStore.remove('id');
         $cookieStore.remove('mail');
         $cookieStore.remove('list_id');
-        $location.path('/');
+        location.reload();
       }
 
     })

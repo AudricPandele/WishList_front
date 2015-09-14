@@ -17,12 +17,13 @@ angular.module('wishListApp')
     var idCookie = $cookieStore.get('id');
 
     $scope.newWishlist = function(wishlist) {
-      $http.post("http://0.0.0.0:9292/wishlists?title="+$scope.wishlist.title+"&description="+$scope.wishlist.description+"&owner_id="+idCookie)
-      .success(function(data){
-        // $cookieStore.put('id', data.id);
-        // $cookieStore.put('email',data.mail);
-        // $cookieStore.put('user', data.user_name);
-        $location.path('/home');
-      });
+      if ($scope.wishlist.title != null) {
+        $http.post("http://0.0.0.0:9292/wishlists?title="+$scope.wishlist.title+"&description="+$scope.wishlist.description+"&owner_id="+idCookie)
+        .success(function(data){
+          $location.path('/home');
+        });
+      }else {
+        Materialize.toast('Please provide a title', 4000);
+      }
     };
   });

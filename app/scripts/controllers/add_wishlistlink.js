@@ -15,12 +15,13 @@ angular.module('wishListApp')
     }
 
     $scope.newWishlistlink = function(wishlistlink) {
-      $http.post("http://0.0.0.0:9292/wishlistslinks?link="+$scope.wishlistlink.link+"&wishlist_id="+$cookieStore.get('list_id'))
-      .success(function(data){
-        // $cookieStore.put('id', data.id);
-        // $cookieStore.put('email',data.mail);
-        // $cookieStore.put('user', data.user_name);
-        $location.path('/home');
-      });
+      if ($scope.wishlistlink.link != null) {
+        $http.post("http://0.0.0.0:9292/wishlistslinks?link="+$scope.wishlistlink.link+"&wishlist_id="+$cookieStore.get('list_id'))
+        .success(function(data){
+          $location.path('/home');
+        });
+      }else {
+        Materialize.toast('Please provide a url', 4000);
+      }
     };
   });

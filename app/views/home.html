@@ -4,11 +4,11 @@
 <h5 class="header col s12 light">My Lists</h5>
 
 <ul class="collection">
-  <a ng-href="#/mylist/{{wl.id}}">
+  <a ng-click="goToMyList({{wl.id}})">
     <li class="collection-item avatar" ng-repeat="wl in wishlist">
       <i class="material-icons circle teal lighten-3">view_list</i>
       <span class="title teal-text text-darken-4">{{wl.title}}</span>
-      <p class="teal-text text-lighten-4">{{wl.description}}<br>
+      <p ng-if="wl.description != 'undefined'" class="teal-text text-lighten-4">{{wl.description}}<br>
       </p>
       <a ng-click="deleteList({{wl.id}})" class="secondary-content red-text text-lighten-1 delete_icon"><i class="material-icons">delete</i></a>
     </li>

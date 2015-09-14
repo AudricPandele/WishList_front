@@ -22,7 +22,7 @@
           $cookieStore.remove('mail');
           $cookieStore.remove('list_id');
           $cookieStore.remove('user_name');
-          $location.path('/');
+          location.reload();
         }
 
         $scope.deleteList = function(id){

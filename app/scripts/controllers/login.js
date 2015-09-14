@@ -30,6 +30,7 @@
          $cookieStore.put('id', data.id);
          $cookieStore.put('mail',data.mail);
          $location.path('/home');
+         location.reload();
        });
        $scope.idCookie = $cookieStore.get('id');
      };
