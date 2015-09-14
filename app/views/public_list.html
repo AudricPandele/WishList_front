@@ -20,13 +20,13 @@
                       <i class="large material-icons">star</i>
                     </a>
                   </div>
-                             </div>
-                <!-- <span ng-repeat="rating in ratings">
-                   <div star-rating rating-value="wll.rate" max="rating.max" on-rating-selected="getSelectedRating(rating, wll.id)"></div>
-                 </span> -->
+                </div>
                  <br>
-              <div class="card-action">
-                <a href="{{wll.link}}" target="_blank" class="teal-text text-lighten-3">Link</a>
+              <div ng-if="wll.ordered == false" class="card-action grey lighten-4">
+                <a class="grey-text text-darken-1" ng-click="order({{wll.id}})">I take that !</a>
+              </div>
+              <div ng-if="wll.ordered == true" class="card-action green lighten-4">
+                <a class="green-text text-darken-1" ng-click="order({{wll.id}})">Alredy buyed</a>
               </div>
             </div>
           </div>

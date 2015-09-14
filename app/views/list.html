@@ -33,9 +33,12 @@
                     <div star-rating rating-value="wll.rate" max="rating.max" on-rating-selected="getSelectedRating(rating, wll.id)"></div>
                   </span> -->
                   <br>
-               <div class="card-action">
-                 <a href="{{wll.link}}" target="_blank" class="teal-text text-lighten-3"><i class="material-icons">visibility</i></a>
-               </div>
+                  <div ng-if="wll.ordered == false" class="card-action grey lighten-4">
+                    <a class="grey-text text-darken-1">Not buyed yet</a>
+                  </div>
+                  <div ng-if="wll.ordered == true" class="card-action green lighten-4">
+                    <a class="green-text text-darken-1">Alredy buyed</a>
+                  </div>
              </div>
            </div>
 
