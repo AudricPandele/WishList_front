@@ -39,8 +39,13 @@
 
       $http.get("http://0.0.0.0:9292/wishlistslinks/wishlist_id/"+$scope.idListCookie)
         .success(function(data){
-          $scope.wishlistlinks = data;
-
+          console.log(data.length)
+          if (data.length != 0) {
+            $scope.nothing = false
+            $scope.wishlistlinks = data;
+          }else {
+            $scope.nothing = true
+          }
         });
 
       $scope.deleteLink = function(id){

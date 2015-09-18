@@ -64,7 +64,9 @@ ul.rating {
 }
 
 .brand-logo img{
-  width: 60px;
+  width: 55px;
+  top: 5px;
+  position: absolute;
 }
 
 .brand-logo{

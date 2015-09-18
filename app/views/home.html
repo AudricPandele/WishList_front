@@ -4,7 +4,7 @@
 <h5 class="header col s12 light">My Lists</h5>
 
 <ul class="collection">
-  <a ng-click="goToMyList({{wl.id}})">
+  <a href="#/mylist/{{wl.id}}">
     <li class="collection-item avatar" ng-repeat="wl in wishlist">
       <i class="material-icons circle teal lighten-3">view_list</i>
       <span class="title teal-text text-darken-4">{{wl.title}}</span>

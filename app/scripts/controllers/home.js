@@ -9,6 +9,7 @@
  */
   angular.module('wishListApp')
     .controller('HomeCtrl', function($location, $scope, $routeParams, $cookieStore, $http) {
+
       if(!$cookieStore.get('id')){
           $location.path('/');
       }
@@ -28,10 +29,10 @@
           location.reload();
         }
 
-        $scope.goToMyList = function(id){
-          $location.path('/mylist/'+id);
-          location.reload();
-        }
+        // $scope.goToMyList = function(id){
+        //   $location.path('/mylist/'+id);
+        //   location.reload();
+        // }
 
         $scope.deleteList = function(id){
           if (window.confirm("Do you really want to delete this Wishlist ?")) {

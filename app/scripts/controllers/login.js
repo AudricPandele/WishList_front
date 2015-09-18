@@ -24,7 +24,7 @@
      $scope.loginUser = function(user) {
        $http.post("http://0.0.0.0:9292/login?mail="+$scope.user.mail+"&password="+$scope.user.password)
        .error(function(argument) {
-         alert('Bad identifiers');
+         Materialize.toast('Bad identifiers', 4000);
        })
        .success(function(data){
          $cookieStore.put('id', data.id);

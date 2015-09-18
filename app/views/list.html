@@ -1,9 +1,10 @@
 <div class="row center">
  <h5 class="header col s12 light">{{wishlist.title}} <span ng-if="wishlist.description != 'undefined'"> - {{wishlist.description}}</span></h5>
- <div class="fb-share-button" data-href="http://localhost:9000/#/{{idCookie}}/{{wishlist.id}}" data-layout="button"></div>
+ <div ng-if="nothing != true" class="fb-share-button" data-href="http://localhost:9000/#/{{idCookie}}/{{wishlist.id}}" data-layout="button"></div>
  <div id="image" class="section scrollspy">
          <div class="row">
            <!-- Image Card -->
+           <a href="#/add_wishlistlink" ng-if="nothing == true" class="waves-effect waves-light btn-large">Add the first product !</a>
            <div class="col s12 m2" ng-repeat="wll in wishlistlinks | orderBy:'-rate'">
              <div class="card">
                <a href="{{wll.link}}" target="_blank">
@@ -34,10 +35,10 @@
                   </span> -->
                   <br>
                   <div ng-if="wll.ordered == false" class="card-action grey lighten-4">
-                    <a class="grey-text text-darken-1">Not buyed yet</a>
+                    <a class="grey-text text-darken-1">Not taken yet</a>
                   </div>
                   <div ng-if="wll.ordered == true" class="card-action green lighten-4">
-                    <a class="green-text text-darken-1">Alredy buyed</a>
+                    <a class="green-text text-darken-1">Alredy taken</a>
                   </div>
              </div>
            </div>
