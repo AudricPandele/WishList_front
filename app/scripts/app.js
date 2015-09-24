@@ -52,12 +52,16 @@ angular
         controller: 'ListCtrl',
         controllerAs: 'list'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about',
-
+      .when('/edit/:list_id', {
+        templateUrl: 'views/edit.html',
+        controller: 'EditCtrl',
+        controllerAs: 'edit'
       })
+      // .when('/about', {
+      //   templateUrl: 'views/about.html',
+      //   controller: 'AboutCtrl',
+      //   controllerAs: 'about'
+      // })
       .when('/create_wishlist', {
         templateUrl: 'views/create_wishlist.html',
         controller: 'CreatewishlistCtrl',

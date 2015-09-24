@@ -5,6 +5,9 @@
           <!-- Image Card -->
           <div class="col s12 m2" ng-repeat="wll in wishlistlinks | orderBy:'-rate'">
             <div class="card">
+              <div ng-if="wll.price != 0" class="col s1">
+                <a class="grey lighten-2 grey-text btn-floating price">{{wll.price}} €</a>
+              </div>
               <a href="{{wll.link}}" target="_blank">
               <div class="card-image" style="background-image:url({{wll.picture}})">
                 <!-- <img src="{{wll.picture}}"> -->
@@ -26,7 +29,7 @@
                 <a class="grey-text text-darken-1" ng-click="order({{wll.id}})">I take that !</a>
               </div>
               <div ng-if="wll.ordered == true" class="card-action green lighten-4">
-                <a class="green-text text-darken-1" ng-click="order({{wll.id}})">Alredy buyed</a>
+                <a class="green-text text-darken-1">Alredy buyed</a>
               </div>
             </div>
           </div>

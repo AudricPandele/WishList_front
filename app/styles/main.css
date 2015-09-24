@@ -5,6 +5,23 @@
   padding: 0.2em 0;
 }
 
+.price{
+  position: absolute;
+  left: -10px;
+  border-radius: 0 !important;
+}
+
+.transparent-container{
+  background-color: black;
+  opacity: .7;
+  padding: 0 0 25px
+}
+
+.headline{
+  position: relative;
+  z-index: 100;
+}
+
 body {
   padding: 0;
 }
@@ -82,6 +99,7 @@ ul.rating {
 }
 .delete_icon{
   color: #eeeeee;
+  z-index: 999;
   position: absolute;
   top: 0;
   right: 0;

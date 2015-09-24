@@ -78,6 +78,7 @@
   <script src="scripts/controllers/main.js"></script>
   <script src="scripts/controllers/about.js"></script>
   <script src="scripts/controllers/login.js"></script>
+  <script src="scripts/controllers/edit.js"></script>
   <script src="scripts/controllers/createwishlist.js"></script>
   <script src="scripts/controllers/list.js"></script>
   <script src="scripts/controllers/add_wishlistlink.js"></script>
@@ -104,6 +105,14 @@
     js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.4&appId=920151581391515";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
+
+  <script type="text/javascript">
+    var options = [
+      {selector: '#staggered-test', offset: 400, callback: 'Materialize.showStaggeredList("#staggered-test"); $("#call-3").velocity({ backgroundColor: "#333", color: "#ef5350" }, {duration: 500});' },
+      // {selector: '#image-test', offset: -1, callback: 'Materialize.fadeInImage("#image-test"); $("#call-4").velocity({ backgroundColor: "#333", color: "#ef5350" }, {duration: 500});' }
+    ];
+    Materialize.scrollFire(options);
+  </script>
 
 </body>
 </html>

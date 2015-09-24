@@ -27,11 +27,12 @@
       </a>
     </div>
 
-    <div class="title-container">
+    <div class="title-container transparent-container">
       <div class="headline">
         <h1 class="white-text">WishList</h1>
-        <h3 class="text-white text-thin">create magical wishlists to share your cravings</h3>
-        <h5 class="text-white text-thin">amazing with <a class="coverr-nav-item btn-track" href="index-ref=producthunt.html#newsletter" data-event="MondayScroll_Click" style="text-decoration: none; border-bottom: 1px dotted #fff; color: #fff;">chrome extension</a></h5>
+        <h3 class="text-white text-thin"><a class="white-text" href="#Login">create magical wishlists to share your cravings</h3></a>
+        <h5 class="text-white text-thin">amazing with <a class="coverr-nav-item btn-track" href="#Bot" style="text-decoration: none; border-bottom: 1px dotted #fff; color: #fff;">chrome extension</a></h5>
+        <a class="white-text" href="#Tuto"><i class="material-icons">info</i></a>
       </div>
     </div>
 
@@ -49,7 +50,7 @@
 </div>
 
 
-<div class="col s12 grey lighten-4" style="padding:30px 0;">
+<div class="col s12 grey lighten-4" style="padding:30px 0;" name=Login>
   <div class="container center">
     <div class="row center">
       <h5 class="header col s12 light">Login or register and enjoy</h5>
@@ -58,42 +59,69 @@
   </div>
 </div>
 
-<div class="col s12  grey lighten-3">
-  <div class="feature row valign-wrapper no-valign-wrapper-on-mobile">
-    <div class="col s12 m5 description valign">
-      <img src="images/list.gif" alt="Editor" class="responsive-img">
+<ul id="staggered-test">
+  <li style="opacity:0;">
+    <div class="col s12  grey lighten-3" name="Tuto">
+      <div class="feature row valign-wrapper no-valign-wrapper-on-mobile">
+        <div class="col s12 m5 description valign">
+          <!-- <img src="images/list.gif" alt="Editor" class="responsive-img"> -->
+        </div>
+        <div class="col s12 offset-m1 m6 no-right-padding valign">
+          <h3 class="teal-text text-lighten-3">Create and share amazing Wishlists !</h3>
+          <blockquote class="teal-text text-darken-4">
+            <p class="flow-text">You just have to add a link and you have all the informations of the product</p>
+          </blockquote>
+        </div>
+      </div>
     </div>
-    <div class="col s12 offset-m1 m6 no-right-padding valign">
-      <h3 class="teal-text text-lighten-3">Create and share amazing Wishlists !</h3>
-      <blockquote class="teal-text text-darken-4">
-        <p class="flow-text">You just have to add a link and you have all the informations of the product</p>
-      </blockquote>
+  </li>
+  <li style="opacity:0;">
+    <div class="col s12  grey lighten-4" name="Bot">
+      <div class="feature row valign-wrapper no-valign-wrapper-on-mobile">
+        <div class="col s12 m5 description valign">
+          <h3 class="teal-text text-lighten-3">The magic Chrome Extension !</h3>
+          <blockquote class="teal-text text-darken-4">
+            <p class="flow-text">You want to add this product to your list ? Just clik me !</p>
+          </blockquote>
+        </div>
+        <div class="col s12 offset-m1 m6 no-right-padding valign">
+          <!-- <img src="images/ext.gif" alt="GitHub" class="responsive-img"> -->
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="col s12  grey lighten-4">
-  <div class="feature row valign-wrapper no-valign-wrapper-on-mobile">
-    <div class="col s12 m5 description valign">
-      <h3 class="teal-text text-lighten-3">The magic Chrome Extension !</h3>
-      <blockquote class="teal-text text-darken-4">
-        <p class="flow-text">You want to add this product to your list ? Just clik on me !</p>
-      </blockquote>
+  </li>
+  <li style="opacity:0;">
+    <div class="col s12  grey lighten-3">
+      <div class="feature row valign-wrapper no-valign-wrapper-on-mobile">
+        <div class="col s12 m5 description valign">
+          <!-- <img src="images/perso.gif" alt="Editor" class="responsive-img"> -->
+        </div>
+        <div class="col s12 offset-m1 m6 no-right-padding valign">
+          <h3 class="teal-text text-lighten-3">Share your personal page</h3>
+          <blockquote class="teal-text text-darken-4">
+            <p class="flow-text">Everybody can access to you wishlist to see him, obviously he can't modify hey</p>
+          </blockquote>
+        </div>
+      </div>
     </div>
-    <div class="col s12 offset-m1 m6 no-right-padding valign"><img src="images/ext.gif" alt="GitHub" class="responsive-img"></div>
-  </div>
-</div>
+  </li>
+</ul>
 
-<div class="col s12  grey lighten-3">
-  <div class="feature row valign-wrapper no-valign-wrapper-on-mobile">
-    <div class="col s12 m5 description valign">
-      <img src="images/perso.gif" alt="Editor" class="responsive-img">
-    </div>
-    <div class="col s12 offset-m1 m6 no-right-padding valign">
-      <h3 class="teal-text text-lighten-3">Share your personal page</h3>
-      <blockquote class="teal-text text-darken-4">
-        <p class="flow-text">Everybody can access to you wishlist to see him, obviously he can't modify hey</p>
-      </blockquote>
-    </div>
-  </div>
-</div>
+
+<script type="text/javascript">
+  $(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+  });
+</script>
