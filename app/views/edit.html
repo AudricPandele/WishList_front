@@ -6,13 +6,13 @@
            <div class="col s12 m2" ng-repeat="wll in wishlistlinks | orderBy:'-rate'">
              <form ng-submit="updateLinks(wll.id, wishlistlink)">
              <div class="card">
+
                <div class="col s1">
-                 <a class="grey lighten-2 grey-text btn-floating price"><input ng-model="wishlistlink.price" type="text" name="name" placeholder="30 €"></a>
-               </div>
+                 <a class="delete_icon" ng-click="deleteLink({{wll.id}})"><i class="material-icons">delete</i></a>
+               </diV>
                <a href="{{wll.link}}" target="_blank">
                <div class="card-image" style="background-image:url({{wll.picture}})">
                  <!-- <img src="{{wll.picture}}"> -->
-                  <i class="material-icons delete_icon" ng-click="deleteLink({{wll.id}})">delete</i>
                  <span class="card-title"></span>
                </div>
                </a>
@@ -46,6 +46,17 @@
              </div>
 
            </div>
+           <div class="col s6">
+            <input ng-model="wishlistlink.price" type="number" placeholder="Price">
+          </div>
+          <div class="col s6">
+            <select class="browser-default" ng-model="wishlistlink.devise">
+              <option value="" disabled selected>Devise</option>
+              <option value="$">$</option>
+              <option value="€">€</option>
+              <option value="£">£</option>
+            </select>
+          </div>
            <button class="btn waves-effect waves-light teal lighten-3" type="submit" name="action">Submit
              <i class="material-icons">send</i>
            </button>
