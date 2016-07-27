@@ -8,7 +8,7 @@
       <div class="col s12 m2" ng-repeat="wll in wishlistlinks | orderBy:'-rate'">
         <div class="card">
           <div ng-if="wll.price != 0" class="col s1">
-            <a class="grey lighten-2 grey-text btn-floating price">{{wll.price}} {{wll.devise}}</a>
+            <a class="red lighten-5 red-text btn-floating price">{{wll.price}} {{wll.devise}}</a>
           </div>
           <div class="col s1">
             <a class="delete_icon" ng-click="deleteLink({{wll.id}})"><i class="material-icons">delete</i></a>
